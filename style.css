@@ -1,0 +1,645 @@
+/*General*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto Slab", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/*transition*/
+a,
+a.btn{
+    transition: all 300ms ease;
+}
+
+/*Desktop nav*/
+ 
+nav,
+.nav-links{
+    display: flex;
+    font-family: "League Spartan", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    background: rgb(165,200,214);
+    background: linear-gradient(90deg, rgba(165,200,214,1) 0%, rgba(215,227,224,1) 30%, rgba(217,228,224,1) 97%);
+    
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    text-decoration-color:rgb(181,181,181);
+}
+
+a:hover{
+    color: rgb(63, 78, 79);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(63, 78, 79);
+}
+
+.logo{
+    font-family: "Libre Baskerville", serif;;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/*Hamburger Menu*/
+
+#hamburger-nav{
+    display: none;
+    border: none;
+}
+
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+    
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+    background: rgb(217,228,224);
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li{
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+
+/*Sections*/
+
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display: flex;
+}
+
+/* Profile Section*/
+
+#profile{
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+    gap: 5rem;
+    background: rgb(165,200,214);
+    background: linear-gradient(90deg, rgba(165,200,214,1) 0%, rgba(240,244,248,1) 20%, rgba(239,243,247,1) 80%, rgba(217,228,224,1) 100%);
+    width: 100%;
+    margin-left: 0;
+}
+
+.section__pic-container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text{
+    align-self: center ;
+    text-align: center;
+}
+
+.section__text p{
+    font-weight: 600;
+}
+
+.section__text_p1{
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+}
+
+.section__text_p2{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.65rem;
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-family: "League Spartan", serif;
+    margin-top: 10px;
+    font-weight: 650;
+    font-size: 3rem;
+    text-align: center;
+}
+.display-pic-1{
+    border-radius: 50%;
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
+    
+
+}
+
+#social-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/*Icon*/
+
+.icon{
+    cursor: pointer;
+    height: 2rem;
+    border-radius: 2rem;
+}
+.icon-profile{
+    transition: box-shadow 0.15s;
+}
+.icon-profile:hover{
+    box-shadow: 4px 5px 3px rgba(0, 0, 0, 0.35);
+    
+}
+
+/*buttons*/
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn-container-2{
+    gap: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+}
+.btn-color-3{
+    background: rgb(199, 226, 237);
+    border: rgb(42, 50, 51) 0.1rem solid;
+    color: rgb(42, 50, 51);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.btn-color-3:hover{
+    background: rgb(42, 50, 51);
+    border: rgb(221, 234, 240) 0.1rem solid;
+    color: white;
+box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;}
+
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1, .btn-color-2{
+    transition: background 0.50s;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-size: 0.8rem;
+}
+
+.btn-color-1:hover, .btn-color-2:hover{
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn-color-2{
+    background: rgb(199, 226, 237);
+    border: rgb(42, 50, 51) 0.1rem solid;
+    color: rgb(42, 50, 51);
+}
+.btn-color-1{
+    background: rgb(42, 50, 51);
+    border: rgb(221, 234, 240) 0.1rem solid;
+    color: rgb(221, 234, 240);
+}
+.btn-color-2:hover{
+    background: rgb(42, 50, 51);
+    border: rgb(221, 234, 240) 0.1rem solid;
+    color: rgb(221, 234, 240);
+}
+.btn-color-1:hover{
+    background: rgb(17, 18, 18);
+    border: rgb(221, 234, 240) 0.1rem solid;
+    color: rgb(221, 234, 240);
+}
+
+
+.btn-container{
+    gap: 1rem;
+}
+
+/*ABout Section*/
+
+#about{
+    position: relative; 
+}
+.about-title{
+
+    margin-top: -50px;
+    margin-bottom: -150px;
+}
+.parallax{
+    display: flex;
+    min-height: 110vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    /*  this is where the magic happens:  */
+    background-attachment: fixed;
+  
+    background-image: url(./assets/parallax-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+
+    color: var(--color);
+    row-gap: 4rem;
+  
+    text-align: center;  
+    min-width: 100%;
+    margin-left: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    
+}
+
+.about-containers{
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.about-containers, .about-details-container{
+    display: flex;
+}
+
+.about-pic{
+    border-radius: 2rem;
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+    display: block;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 55%);
+    mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+    -webkit-mask-size: 800%;
+    mask-size: 800%;
+    -webkit-mask-position: 0;
+    mask-position: 0;
+}
+.about-pic:hover {
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+    transition: mask-position 1.15s ease,-webkit-mask-position 1.15s ease;
+    -webkit-mask-position: 120%;
+    mask-position: 120%;
+    opacity: 1;
+}
+
+.details-container{
+    padding: 1.5rem;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 2rem;
+   border: rgb(217, 228, 224) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.details-container-2{
+    padding: 1.5rem;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2rem;
+   border: rgb(12, 13, 13) 0.15rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.details-container-text{
+    padding: 1.5rem;
+
+    background: rgba(240, 244, 248, 0.95);
+    border-radius: 2rem;
+    border-color: rgb(163, 163, 163);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.section-container{
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container{
+    height: 400px;
+    width: 400px;
+    margin: auto o;
+}
+.about-font{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+}
+.text-container{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/*Experience Section*/
+
+#experience{
+    position: relative;
+    background: rgb(165,200,214);
+    background: linear-gradient(90deg, rgba(165,200,214,1) 0%, rgba(240,244,248,1) 20%, rgba(239,243,247,1) 80%, rgba(217,228,224,1) 100%);
+    width: 100%;
+    margin-left: 0;
+    padding-left: 200px;
+    padding-right: 200px;
+    
+}
+
+.experience-sub-title{
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+
+}
+.article-container-2{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+    height: 500px ;
+
+}
+
+article{
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon{
+    cursor: default;
+}
+
+/*Projects section*/
+h4 {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: rgb(53, 53, 53);
+    font-weight: 500;
+}
+#projects{
+    position: relative;
+    background-image: url(./assets/background-pic.png);
+    background-position: bottom;
+    width: 100%;
+    margin-left: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-bottom: 100px;
+}
+
+.color-container{
+    border-color: rgb(163, 163, 163);
+}
+
+.project-img{
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+
+.project-title{
+    margin: 1rem;
+    color: black;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    margin-top: -25px;
+}
+.project-title-2{
+    margin: 1rem;
+    color: black;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    margin-top: 6px;
+}
+
+.project-btn{
+    color: black;
+    border-color: rgb(163, 163, 163);
+}
+.zoom {
+    padding: 20px;
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    padding: 0;
+    padding-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;  }
+/*Contact section*/
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    background: rgb(165,200,214);
+    background: linear-gradient(90deg, rgba(165,200,214,1) 0%, rgba(240,244,248,1) 20%, rgba(239,243,247,1) 80%, rgba(217,228,224,1) 100%);
+    width: 100%;
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250) ;
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+}
+
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+}
+
+.email-icon{
+    height: 2.5rem;
+}
+.conc{
+    cursor: pointer;
+}
+
+/* Certificate section */
+#Certificate{
+    position: relative;
+    background-image: url(./assets/bg-2.jpg);
+    background-position: bottom;
+    width: 100%;
+    margin-left: 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 180px;
+    padding-right: 180px;
+    padding-bottom: 100px;
+}
+
+/*Footer Section*/
+
+footer{
+    height: 13ch;
+    margin: 0.1rem;
+}
+
+footer p{
+    text-align: center;
+}
