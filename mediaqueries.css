@@ -54,6 +54,9 @@
     .text-container{
         padding-bottom: 10px;
     }
+    .skill-container{
+        padding-right: 75px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -114,5 +117,31 @@
         margin: 0.1rem;
         font-size: 15px;
     }
+    .skill-container{
+        padding-right: 100px;
+        margin-left: -70px;
+        margin-right: auto;
+
+    }
 
 }
+
+@media screen and (max-width: 500px){
+    .skill-container{
+        margin-left: -75px;
+        padding-right: 50px;
+
+    }
+    .btn-skill{
+        margin-left: -35px;
+    }
+    .text-container{
+        margin-bottom: 10px;
+    }
+    .project-img{
+        height: auto;
+        width: 300px;
+        padding-bottom: 50px;
+    }
+}
+
